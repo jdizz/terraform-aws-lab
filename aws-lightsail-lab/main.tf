@@ -6,6 +6,7 @@ resource "aws_lightsail_instance" "simpleStack" {
     bundle_id           = "nano_2_0"
 }
 
+# Import Key Pair
 resource "aws_lightsail_key_pair" "jd_key_paid" {
     name                = "importing"
     public_key          = "${file("~/.ssh/id_rsa.pub")}"
